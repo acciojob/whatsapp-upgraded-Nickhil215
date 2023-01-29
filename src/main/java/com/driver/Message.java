@@ -1,6 +1,5 @@
 package com.driver;
 
-import javax.annotation.processing.Generated;
 import java.util.Date;
 public class Message {
     private int id;
@@ -9,11 +8,12 @@ public class Message {
     private Date timestamp;
 
 
-    public Message(int id, String content, Date timestamp) {
+    public Message(int id, String content) {
         this.id = id;
         this.content = content;
-        this.timestamp = timestamp;
     }
+
+
 
     public int getId() {
         return id;
