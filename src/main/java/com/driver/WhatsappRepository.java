@@ -61,7 +61,7 @@ public class WhatsappRepository {
           If the message is sent successfully, the application will return the final number of messages in that group.
       */
         if(!groupMap.containsKey(group)){
-            throw new Exception("Grop not found");
+            throw new Exception("Group does not exist");
         }
         boolean present=false;
         for(User user:groupMap.get(group)){
@@ -71,7 +71,7 @@ public class WhatsappRepository {
         }
 
         if(!present){
-            throw new Exception("User not found");
+            throw new Exception("You are not allowed to send message");
         }
 
         if(groupMessagesList.containsKey(group)){
