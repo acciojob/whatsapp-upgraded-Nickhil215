@@ -23,7 +23,7 @@ public class WhatsappController {
     WhatsappService whatsappService = new WhatsappService();
 
     @PostMapping("/add-user")
-    public String createUser(String name, String mobile) throws Exception {
+    public String createUser(@RequestParam String name,@RequestParam String mobile) throws Exception {
         //If the mobile number exists in database, throw "User already exists" exception
         //Otherwise, create the user and return "SUCCESS"
 
@@ -45,7 +45,7 @@ public class WhatsappController {
     }
 
     @PostMapping("/add-message")
-    public int createMessage(String content){
+    public int createMessage(@RequestParam String content){
         // The 'i^th' created message has message id 'i'.
         // Return the message id.
 
