@@ -17,7 +17,7 @@ public class WhatsappRepository {
     Map<Group,List<Message>> groupMessagesList=new HashMap<>();
     public String createUser(String name, String mobile) throws Exception {
         if(userMap.containsKey(mobile)){
-            throw new Exception("Mobile number already registared");
+            throw new Exception("User already exists");
         }
         User user=new User(name,mobile);
         userMap.put(mobile,user);
